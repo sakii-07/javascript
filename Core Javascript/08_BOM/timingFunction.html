@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch</title>
+
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+    }
+
+    #box{
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    #box1, #box2, #box3{
+        border: 2px solid black;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    #box1 h1, #box2 h1, #box3 h1{
+        margin: 0;
+        font-size: 28px;
+    }
+
+    button{
+        padding: 8px 15px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        display: inline;
+        border: none;
+        background-color: black;
+        color: white;
+    }
+
+    button:hover{
+        background-color: gray;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="box">
+    <div id="box1"><h1 id="head1">0</h1></div>
+    <div id="box2"><h1 id="head2">0</h1></div>
+    <div id="box3"><h1 id="head3">0</h1></div>
+</div>
+
+<div id="btns">
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+</div>
+
+<script src="timingFunction.js"></script>
+
+</body>
+
+</html>
