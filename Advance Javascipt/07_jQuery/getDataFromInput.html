@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get data from input and print in head tag</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></head>
+
+</head>
+<body>
+
+    <input type="text" id="inp" placeholder="Enter name here">
+    <button id="btn">Get data</button>
+
+    <h1 id="head"></h1>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("#btn").on("click", function () {
+                var name = $("#inp").val();
+                $("#head").html(name)
+            })
+
+        })
+    </script>
+    
+</body>
+</html>

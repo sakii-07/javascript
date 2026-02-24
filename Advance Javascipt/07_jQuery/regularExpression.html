@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular expression</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></head>
+
+</head>
+<body>
+
+    <input type="text" id="inp" placeholder="Enter name here">
+    <button id="btn">Get data</button>
+
+    <p style="color: red;" id="errorMsg"></p>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("#inp").on("blur", function () {
+
+                var checkChar = "^[A-Za-z]+$"
+                var name = $("#inp").val();
+
+                if(name.match(checkChar)){
+                    $("#errorMsg").html("")
+                }else{
+                    $("#errorMsg").html("Enter valid name")
+                }
+            })
+
+        })
+    </script>
+    
+</body>
+</html>

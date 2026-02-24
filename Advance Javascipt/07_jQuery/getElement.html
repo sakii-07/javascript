@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get Element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></head>
+<body>
+
+    <h1 id="head">This is heading</h1>
+
+    <input type="text" id="inp" value="sam">
+
+    <script>
+        $(document).ready(function(){
+
+            // In javascript - To get element
+            var a = document.getElementById("head");
+            console.log(a);
+            
+
+            // In jQuery - To get element
+            var b = $("#head")
+            console.log(b);
+
+
+            // In javascript - To get element data
+            var a = document.getElementById("head").innerHTML;
+            console.log(a);
+            
+
+            // In jQuery - To get element data
+            var b = $("#head").html()
+            console.log(b);
+
+            // In javascript - To get element data from input
+            var a = document.getElementById("inp").value;
+            console.log(a);
+            
+
+            // In jQuery - To get element data from input
+            var b = $("#inp").val()
+            console.log(b);
+
+        })
+    </script>
+    
+</body>
+</html>
