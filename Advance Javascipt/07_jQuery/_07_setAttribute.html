@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set attribute</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- .attr("attributeName", "value") is used to set an attribute value.
+
+        It updates or adds the specified attribute to the element.
+
+        Syntax:
+        $("selector").attr("attributeName", "value") -->
+
+        
+    <h1 id="head"></h1>
+    <button id="btn">Get</button>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#btn").on("click", function () {
+                var a = $("#head").attr({"class":"head"})
+                console.log(a)
+            })
+            
+        })
+
+    </script>
+    
+</body>
+</html>

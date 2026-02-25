@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- jQuery Create & Insert Methods :-
+
+        .append() is used to add content at the end inside the selected element.
+        .prepend() is used to add content at the beginning inside the selected element.
+        .after() is used to add content after the selected element.
+        .before() is used to add content before the selected element.
+
+        These methods help to dynamically add elements to the page.
+
+        jQuery Remove Methods :-
+
+        .empty() removes only the inner content of the selected element.
+        .remove() removes the complete element including its content.
+        After .remove(), the element is permanently deleted from the DOM. -->
+
+
+
+    <h1 id="head">This is heading</h1>
+
+    <script>
+
+        $(document).ready(function () {
+            
+            $("#head").append("<h1 id='head1'>This is heading 1111</h1>");
+
+            $("#head").after("<h1 id='head2'>This is heading 2222</h1>");
+
+            $("#head").before("<h1 id='head3'>This is heading 3333</h1>");
+
+            $("#head").prepend("<h1 id='head4'>This is heading 4444</h1>");
+
+            $("#head").empty();
+
+            $("#head").remove();
+
+        });
+
+    </script>
+    
+</body>
+</html>

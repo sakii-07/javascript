@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+     <!--  📌 Important Points :-
+
+        ✔ Effects are used to add animation to elements.
+        ✔ Duration is given in milliseconds.
+        ✔ All methods are event-based (used with click).
+        ✔ jQuery makes animation simple and short. -->
+
+    <button id="btn">Click here</button>
+    <h1 id="head">Welcome to jQuery</h1>
+
+    <script>
+
+        $(document).ready(function () {
+
+            /* 📌 jQuery Effects Methods :-
+
+            .hide() is used to hide an element.
+
+            .show() is used to display a hidden element.
+
+            .toggle() is used to hide and show an element alternately. */
+
+            // hide element
+            $("#btn").on("click",function () {
+                $("#head").hide();
+            })
+
+            // show element
+            $("#head").hide();
+            $("#btn").on("click",function () {
+                 $("#head").show();
+            })
+
+            // both at a time
+             $("#head").hide();
+             $("#btn").on("click",function () {
+                 $("#head").toggle();
+            })
+
+            /*  📌 Slide Effects :-
+
+                .slideUp() hides an element with sliding effect.
+
+                .slideDown() shows an element with sliding effect.
+
+                .slideToggle() toggles between slideUp and slideDown.
+
+                Time (like 3000) is duration in milliseconds. */
+
+            // slideup
+            $("#btn").on("click",function () {
+                 $("#head").slideUp(3000);
+            })
+
+            // slidedown
+            $("#btn").on("click",function () {
+                 $("#head").slideDown(3000);
+            })
+
+            // slideToggle
+            $("#btn").on("click",function () {
+                 $("#head").slideToggle(3000);
+            })
+
+            /* 📌 Fade Effects :-
+
+                .fadeIn() shows element with fade effect.
+
+                .fadeOut() hides element with fade effect.
+
+                .fadeToggle() toggles fadeIn and fadeOut. */
+
+            // fadeIn
+            $("#btn").on("click",function () {
+                 $("#head").fadeIn(3000);
+            })
+
+            // fadeOut
+            $("#btn").on("click",function () {
+                 $("#head").fadeOut(3000);
+            })
+
+            // fadeToggle
+            $("#btn").on("click",function () {
+                 $("#head").fadeToggle(3000);
+            })
+
+            /* 📌 Animation & Style :-
+
+                .animate() is used to create custom animation.
+
+                Example: move element using "margin-left":"300px".
+
+                .css() is used to change CSS properties directly.
+
+                .attr() is used to set or change attributes like class. */
+
+            // animate
+            $("#btn").on("click",function () {
+                 $("#head").animate({"margin-left":"300px"});
+            })
+
+            // css
+            $("#btn").on("click",function () {
+                 $("#head").css({"margin-left":"300px"});
+            })
+
+            // animate
+            $("#btn").on("click",function () {
+                 $("#head").attr({"class":"head1"});
+            })
+            
+        })
+    </script>
+    
+</body>
+</html>
